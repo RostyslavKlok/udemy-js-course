@@ -1,0 +1,34 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "cart", function () {
+  return cart;
+});
+_parcelHelpers.export(exports, "addToCard", function () {
+  return addToCard;
+});
+_parcelHelpers.export(exports, "totalPrice", function () {
+  return totalPrice;
+});
+_parcelHelpers.export(exports, "totalQuantity", function () {
+  return totalQuantity;
+});
+// Exporting Module
+console.log("Exporting module");
+const shippingCost = 10;
+const cart = [];
+const addToCard = function (product, quantity) {
+  cart.push({
+    product,
+    quantity
+  });
+  console.log(`${quantity} ${product} added to cart`);
+};
+const totalPrice = 237;
+const totalQuantity = 23;
+exports.default = function (product, quantity) {
+  cart.push({
+    product,
+    quantity
+  });
+  console.log(`${quantity} ${product} added to cart`);
+};
